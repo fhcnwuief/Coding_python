@@ -1,8 +1,4 @@
 def solution(arr, divisor):
-    answer = []
-    for num in arr:
-        if num % divisor == 0:
-            answer.append(num)
+    answer = [num for num in arr if num % divisor == 0]
     answer.sort()
-    if len(answer) == 0 : return [-1]
-    return answer
+    return answer if len(answer) != 0 else [-1]
